@@ -65,6 +65,131 @@ nav{
     height: 3rem;
 
 }
+.bloc_text{
+    gap: 2.4rem;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 15.8rem;
+}
+.bloc_text_box{
+    background-color: #fff;
+    display: flex;
+    width: 54rem;
+    align-items: center;
+    gap: 2.4rem ;
+    padding: 2rem 2.4rem;
+    border-radius: 0.5rem;
+}
+.bloc_text_border{
+    width: 2.6rem;
+    height: 2.6rem;
+    padding: 0.1rem;
+    background-color: gray;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.bloc_text_border_check{
+    background-color: white;
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: 50%;
+}
+.check_linear{
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+input{
+    outline: none;
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+.text{
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: var(--text-color); 
+}
+
+.bloc_tache{
+    /* display: none; */
+    gap: 2.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: 5rem;
+    box-shadow: 0px 35px 50px -15px #C2C3D680;
+
+
+}
+.bloc_tache_box{
+    background-color: #fff;
+    display: flex;
+    width: 54rem;
+    align-items: center;
+    gap: 2.4rem ;
+    padding: 2rem 2.4rem;
+    border-radius: 0.5rem;
+}
+.bloc_tache_border{
+    width: 2.6rem;
+    height: 2.6rem;
+    padding: 0.1rem;
+    background-color: gray;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.bloc_tache_border:hover{
+background: linear-gradient(135deg, #55DDFF 0%, #C058F3 100%);
+}
+.bloc_text_border:hover{
+    background: linear-gradient(135deg, #55DDFF 0%, #C058F3 100%);
+    }
+.bloc_tache_border_check{
+    background-color: white;
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: 50%;
+}
+.bloc_tache_box>img{
+    left:22.4rem;
+    position: relative;
+}
+h1{
+    color: var(--low-text-color);
+    font-size: 1.4rem;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 4.4rem  ;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -89,4 +214,5 @@ nav{
         padding:7rem 0rem 4rem;
         gap: 34.8rem;
     }
+   
 }
