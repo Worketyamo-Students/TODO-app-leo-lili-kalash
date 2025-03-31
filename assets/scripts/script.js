@@ -1,11 +1,10 @@
-
 document.addEventListener("DOMContentLoaded", () => {
   const darkModeButton = document.querySelector(".dark_mode");
   let currentTheme = localStorage.getItem("theme") || "light";
 
   if (currentTheme === "dark") {
     document.documentElement.setAttribute("data-theme", "dark");
-    darkModeButton.src = "./assets/imgs/soleil.svg";
+    darkModeButton.src = "";
   }
 
   darkModeButton.addEventListener("click", () => {
@@ -19,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     darkModeButton.src =
       newTheme === "dark"
-        ? "./assets/imgs/soleil.svg"
+        ? "./assets/imgs/soleil.jpg"
         : "./assets/imgs/lune.svg";
   });
 });
