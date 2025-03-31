@@ -9,16 +9,16 @@
 <body>
     <header>
         <nav>
-            <div class="nav_container">
+            <div class="nav_container_box">
                 <span class="todo_text">TODO</span>
-                <div class="nav_container_box"><img class="dark_mode" src="./assets/imgs/lune.svg" alt="dark mode"></div>
+                <img class="dark_mode" src="./assets/imgs/lune.svg" alt="dark mode">
             </div>
         </nav>
         <div class="bloc_text">
             <div class="bloc_text_box">
                 <div class="bloc_text_border">
                     <div class="bloc_text_border_check">
-                        <img class="check_linear" src="./assets/imgs/check.svg" alt="">
+                        <img class="check_linear" oninput="condition()" id="caracter_controler" src="./assets/imgs/check.svg" alt="">
                     </div>
                 </div>
                 <input placeholder="Create a new todo…" type="text" id="check_cross">

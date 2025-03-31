@@ -1,87 +1,132 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Galada&family=Handlee&family=IBM+Plex+Sans+Hebrew:wght@100;200;300;400;500;600;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jockey+One&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playwrite+IT+Moderna:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto&display=swap');
 
-*{
-    border:0;
+* {
+    border: 0;
     margin: 0;
     padding: 0;
-    font-family:"Josefin Sans", sans-serif;
-    box-sizing: border-box; 
+    font-family: "Josefin Sans", sans-serif;
+    box-sizing: border-box;
 }
 
-:root{
-    --low-text-color:#9495A5;
-    --text-color:#494C6B;
-    --text-rod-color:#D1D2DA;
-    --border-color:#E3E4F1;
-    --linear-box:linear-gradient(135deg, #55DDFF 0%, #C058F3 100%);
-    --text-color-hover:#3A7CFD;
+:root {
+    --low-text-color: #9495A5;
+    --text-color: #494C6B;
+    --text-rod-color: #D1D2DA;
+    --border-color: #E3E4F1;
+    --linear-box: linear-gradient(135deg, #55DDFF 0%, #C058F3 100%);
+    --text-color-hover: #3A7CFD;
 }
 
-html{
-    font-size:10px;
+:root {
+    --low-text-color: #9495A5;
+    --text-color: #494C6B;
+    --text-rod-color: #D1D2DA;
+    --border-color: #E3E4F1;
+    --linear-box: linear-gradient(135deg, #55DDFF 0%, #C058F3 100%);
+    --text-color-hover: #3A7CFD;
+    --dark-low-text-color: #E3E4F1;
+    --dark-text-color: #D1D2DA;
+    --dark-text-rod-color: #494C6B;
+    --dark-border-color: #2A2A72;
+    --dark-linear-box: linear-gradient(135deg, #AC2DEB 0%, #5596FF 100%);
+    --dark-text-color-hover: #C058F3;
 }
 
-body{
+[data-theme="dark"] {
+    --low-text-color: var(--dark-low-text-color);
+    --text-color: var(--dark-text-color);
+    --text-rod-color: var(--dark-text-rod-color);
+    --border-color: var(--dark-border-color);
+    --linear-box: var(--dark-linear-box);
+    --text-color-hover: var(--dark-text-color-hover);
+    background-color: #171823;
+    color: #fff;
+    background-color: #171823;
+    color: #fff;
+}
+
+
+[data-theme="dark"] .bloc_text_box,
+[data-theme="dark"] .bloc_tache_box {
+    background-color: #25273D;
+}
+
+[data-theme="dark"] nav {
+    background: linear-gradient(225deg, #2A2A72 0%, #1E1E4D 100%);
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
     width: 100vw;
-    height: 100vh;
+    height: 100vw;
 }
-header{
+
+header {
     background-image: url(../imgs/herosection.svg);
-    background-size:cover;
+    background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
     height: 20rem;
 }
-nav{
+
+nav {
     width: 100%;
     height: 20rem;
     background: linear-gradient(225deg, #5596FF 0%, #AC2DEB 100%);
     opacity: 0.8;
 }
-.nav_container{
+
+.nav_container_box {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 4.4rem 2.5rem 4rem;
     /* gap: 10rem; */
 }
-.nav_container_box{
+
+.dark_mode {
     width: 2rem;
-    height: 2rem;   
+    height: 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.todo_text{
+
+.todo_text {
     letter-spacing: 15px;
     color: white;
     font-weight: 700;
     font-size: 4rem;
 }
 
-.dark_mode{
+.dark_mode {
     width: 3rem;
     height: 3rem;
 
 }
-.bloc_text{
+
+.bloc_text {
     gap: 2.4rem;
     display: flex;
     justify-content: center;
     position: relative;
     bottom: 15.8rem;
 }
-.bloc_text_box{
+
+.bloc_text_box {
     background-color: #fff;
     display: flex;
     width: 54rem;
     align-items: center;
-    gap: 2.4rem ;
+    gap: 2.4rem;
     padding: 2rem 2.4rem;
     border-radius: 0.5rem;
 }
-.bloc_text_border{
+
+.bloc_text_border {
     width: 2.6rem;
     height: 2.6rem;
     padding: 0.1rem;
@@ -89,30 +134,34 @@ nav{
     border-radius: 50%;
     cursor: pointer;
 }
-.bloc_text_border_check{
+
+.bloc_text_border_check {
     background-color: white;
     width: 2.4rem;
     height: 2.4rem;
     border-radius: 50%;
 }
-.check_linear{
-    /* display: flex; */
+
+.check_linear {
+    display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 0;
+    transition: opacity 0.3s ease; 
 }
-input{
+
+input {
     outline: none;
     font-size: 1.8rem;
     font-weight: 400;
 }
-.text{
+
+.text {
     font-size: 1.8rem;
     font-weight: 400;
-    color: var(--text-color); 
+    color: var(--text-color);
 }
 
-.bloc_tache{
+.bloc_tache {
     /* display: none; */
     gap: 2.4rem;
     display: flex;
@@ -124,16 +173,18 @@ input{
 
 
 }
-.bloc_tache_box{
+
+.bloc_tache_box {
     background-color: #fff;
     display: flex;
     width: 54rem;
     align-items: center;
-    gap: 2.4rem ;
+    gap: 2.4rem;
     padding: 2rem 2.4rem;
     border-radius: 0.5rem;
 }
-.bloc_tache_border{
+
+.bloc_tache_border {
     width: 2.6rem;
     height: 2.6rem;
     padding: 0.1rem;
@@ -141,78 +192,55 @@ input{
     border-radius: 50%;
     cursor: pointer;
 }
-.bloc_tache_border:hover{
-background: linear-gradient(135deg, #55DDFF 0%, #C058F3 100%);
-}
-.bloc_text_border:hover{
+
+.bloc_tache_border:hover {
     background: linear-gradient(135deg, #55DDFF 0%, #C058F3 100%);
-    }
-.bloc_tache_border_check{
+}
+
+.bloc_text_border:hover {
+    background: linear-gradient(135deg, #55DDFF 0%, #C058F3 100%);
+}
+
+.bloc_tache_border_check {
     background-color: white;
     width: 2.4rem;
     height: 2.4rem;
     border-radius: 50%;
 }
-.bloc_tache_box>img{
-    left:22.4rem;
+
+.bloc_tache_box>img {
+    left: 22.4rem;
     position: relative;
 }
-h1{
+
+h1 {
     color: var(--low-text-color);
     font-size: 1.4rem;
     font-weight: 400;
     text-align: center;
-    margin-top: 4.4rem  ;
+    margin-top: 4.4rem;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
 
 @media screen and (min-width:1200px) {
-    header{
+    header {
         height: 34rem;
         background-position-y: -10rem;
     }
-    nav{
+
+    nav {
         height: 34rem;
-       
+
     }
-    .nav_container{
+
+    .nav_container {
         display: flex;
         align-items: center;
-        justify-content: center ;
-        padding:7rem 0rem 4rem;
+        justify-content: center;
+        padding: 7rem 0rem 4rem;
         gap: 34.8rem;
     }
-   
+
 }
