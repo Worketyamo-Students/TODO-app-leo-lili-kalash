@@ -1,0 +1,219 @@
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    font-family: "Josefin Sans", sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+:root {
+    --low-text-color: #9495A5;
+    --text-color: #494C6B;
+    --text-rod-color: #D1D2DA;
+    --border-color: #E3E4F1;
+    --linear-box: linear-gradient(135deg, #55DDFF 0%, #C058F3 100%);
+    --text-color-hover: #3A7CFD;
+    --dark-low-text-color: #E3E4F1;
+    --dark-text-color: #D1D2DA;
+    --dark-text-rod-color: #494C6B;
+    --dark-border-color: #2A2A72;
+    --dark-linear-box: linear-gradient(135deg, #AC2DEB 0%, #5596FF 100%);
+    --dark-text-color-hover: #C058F3;
+}
+
+[data-theme="dark"] {
+    --low-text-color: var(--dark-low-text-color);
+    --text-color: var(--dark-text-color);
+    --text-rod-color: var(--dark-text-rod-color);
+    --border-color: var(--dark-border-color);
+    --linear-box: var(--dark-linear-box);
+    --text-color-hover: var(--dark-text-color-hover);
+    background-color: #171823;
+    background-image: none;
+    color: #fff;
+}
+
+[data-theme="dark"] .bloc_text_box {
+    background-color: #25273D;
+    box-shadow: 0px 35px 50px -15px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+
+[data-theme="dark"] nav {
+    background: linear-gradient(225deg, #2A2A72 0%, #1E1E4D 100%);
+}
+
+html {
+    font-size: 10px;
+}
+
+header {
+    background-image: url(../imgs/herosection.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 20rem;
+    z-index: -1;
+}
+
+nav {
+    width: 100%;
+    height: 20rem;
+    background: linear-gradient(225deg, #5596FF 0%, #AC2DEB 100%);
+    opacity: 0.8;
+    z-index: 1;
+}
+
+.nav_container_box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4.4rem 2.5rem 4rem;
+}
+
+.dark_mode {
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.todo_text {
+    letter-spacing: 15px;
+    color: white;
+    font-weight: 700;
+    font-size: 4rem;
+}
+
+.bloc_text {
+    gap: 2.4rem;
+    display: flex;
+    justify-content: center;
+    margin-top: -15.8rem;
+}
+
+.bloc_text_box {
+    background-color: #fff;
+    display: flex;
+    width: 54rem;
+    align-items: center;
+    gap: 2.4rem;
+    padding: 2rem 2.4rem;
+    border-radius: 0.5rem;
+    z-index: 2;
+}
+
+
+.bloc_text_border {
+    width: 2.6rem;
+    height: 2.6rem;
+    padding: 0.1rem;
+    background-color: gray;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.bloc_text_border_check {
+    background-color: white;
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: 50%;
+}
+
+.check_linear {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    outline: none;
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+.text {
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: var(--text-color);
+}
+
+.bloc_tache {
+    gap: 2.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: 5rem;
+    box-shadow: 0px 35px 50px -15px #C2C3D680;
+}
+
+.bloc_tache_box {
+    background-color: #fff;
+    z-index: 2;
+    display: flex;
+    width: 54rem;
+    align-items: center;
+    gap: 2.4rem;
+    padding: 2rem 2.4rem;
+    border-radius: 0.5rem;
+}
+
+.bloc_tache_border {
+    width: 2.6rem;
+    height: 2.6rem;
+    padding: 0.1rem;
+    background-color: gray;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.bloc_tache_border:hover,
+.bloc_text_border:hover {
+    background: var(--linear-box);
+}
+
+.bloc_tache_border_check {
+    background-color: white;
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: 50%;
+}
+
+.bloc_tache_box img {
+    margin-left: auto;
+}
+
+h1 {
+    color: var(--low-text-color);
+    font-size: 1.4rem;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 4.4rem;
+}
+
+@media screen and (min-width:1200px) {
+    header {
+        height: 34rem;
+        background-position-y: -10rem;
+    }
+
+    nav {
+        height: 34rem;
+    }
+
+    .nav_container_box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 7rem 0rem 4rem;
+        gap: 34.8rem;
+    }
+}
