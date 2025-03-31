@@ -61,7 +61,12 @@ html {
 
 body {
     width: 100vw;
+<<<<<<< HEAD
     height: 100vw;
+=======
+    height: 100vh;
+    overflow-x: hidden;
+>>>>>>> 7bfefc73b90a8e3b7763adc0e34c3a62b37a0e7d
 }
 
 header {
