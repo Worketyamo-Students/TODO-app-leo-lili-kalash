@@ -23,7 +23,7 @@ body {
     --dark-text-color: #D1D2DA;
     --dark-text-rod-color: #494C6B;
     --dark-border-color: #2A2A72;
-    --dark-linear-box: linear-gradient(135deg, #AC2DEB 0%, #5596FF 100%);
+    --dark-linear-box: linear-gradient(135deg, #3710BD 0%, #A42395 100%);
     --dark-text-color-hover: #C058F3;
 }
 
@@ -128,9 +128,9 @@ nav {
 }
 
 .check_linear {
-    display: flex;
+    display: none;
     justify-content: center;
-    align-items: center;
+    align-items: center;    
 }
 
 input {
@@ -175,8 +175,7 @@ input {
     cursor: pointer;
 }
 
-.bloc_tache_border:hover,
-.bloc_text_border:hover {
+.bloc_tache_border:hover.bloc_text_border:hover {
     background: var(--linear-box);
 }
 
