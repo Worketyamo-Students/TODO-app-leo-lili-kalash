@@ -29,10 +29,9 @@
 // option de cochage
 let imagecoche=document.getElementById("inputcocher");
 let input=document.getElementById("check_input");
+let text=document.querySelectorAll(".text");
 input.addEventListener("input", function() {
-  console.log(input.value.length);
   if (input.value.length > 4) {
-    console.log("super")
     imagecoche.style.display="flex"
 
   } 
@@ -40,4 +39,13 @@ input.addEventListener("input", function() {
     imagecoche.style.display="none"
   }
 });
+// option de recuperation de la valeur de l'input au clic
+input.addEventListener('keydown', function(event) {
+  if (event.key === "Enter") {
+    console.log(input.value)
+    input.value=""
+    imagecoche.style.display="none"
+  }
+})
+
   

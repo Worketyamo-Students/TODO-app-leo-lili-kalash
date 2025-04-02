@@ -175,7 +175,10 @@ input {
     cursor: pointer;
 }
 
-.bloc_tache_border:hover.bloc_text_border:hover {
+.bloc_tache_border:hover {
+    background: var(--linear-box);
+}
+.bloc_text_border:hover{
     background: var(--linear-box);
 }
 
